@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"biomejs.rome",
+		"streetsidesoftware.code-spell-checker",
+		"antfu.unocss",
+		"pflannery.vscode-versionlens",
+		"naumovs.color-highlight",
+		"davidanson.vscode-markdownlint",
+		"gruntfuggly.todo-tree"
+	]
+}
