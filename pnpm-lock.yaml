@@ -11,6 +11,9 @@ dependencies:
   '@julr/vite-plugin-validate-env':
     specifier: ^1.1.1
     version: 1.1.1(vite@5.2.9)(zod@3.22.4)
+  '@preact/signals':
+    specifier: ^1.2.3
+    version: 1.2.3(preact@10.20.2)
   '@tanstack/react-query':
     specifier: ^5.29.2
     version: 5.29.2(react@18.2.0)
@@ -2541,6 +2544,19 @@ packages:
     resolution: {integrity: sha512-u4dmT7PDHwNtxY3q1jHVp/u+hMEEcBlkzd37QwwM4tVt/0mLlEDttSfPQ+TT7sqPG4VEtWKwVSlMInwPUYyJpA==}
     dependencies:
       validator: 13.11.0
+    dev: false
+
+  /@preact/signals-core@1.6.0:
+    resolution: {integrity: sha512-O/XGxwP85h1F7+ouqTMOIZ3+V1whfaV9ToIVcuyGriD4JkSD00cQo54BKdqjvBJxbenvp7ynfqRHEwI6e+NIhw==}
+    dev: false
+
+  /@preact/signals@1.2.3(preact@10.20.2):
+    resolution: {integrity: sha512-M2DXse3Wi8HwjI1d2vQWOLJ3lHogvqTsJYvl4ofXRXgMFQzJ7kmlZvlt5i8x5S5VwgZu0ghru4HkLqOoFfU2JQ==}
+    peerDependencies:
+      preact: 10.x
+    dependencies:
+      '@preact/signals-core': 1.6.0
+      preact: 10.20.2
     dev: false
 
   /@repeaterjs/repeater@3.0.5:
@@ -5861,6 +5877,10 @@ packages:
       nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.2.0
+
+  /preact@10.20.2:
+    resolution: {integrity: sha512-S1d1ernz3KQ+Y2awUxKakpfOg2CEmJmwOP+6igPx6dgr6pgDvenqYviyokWso2rhHvGtTlWWnJDa7RaPbQerTg==}
+    dev: false
 
   /prebuild-install@7.1.2:
     resolution: {integrity: sha512-UnNke3IQb6sgarcZIDU3gbMeTp/9SSU1DAIkil7PrqG1vZlBtY5msYccSKSHDqa3hNg436IXK+SNImReuA1wEQ==}
