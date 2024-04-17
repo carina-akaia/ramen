@@ -1,5 +1,5 @@
+import { APP_NAME } from "@/common/config"
 import { createFileRoute } from "@tanstack/react-router"
-import { APP_NAME } from "~/common/config"
 
 export const Route = createFileRoute("/")({
 	component: () => <Page />,
