@@ -4,6 +4,13 @@
 
 Offline-first scalable battle-tested React app template. Just add water.
 
+## Architecture
+
+### Dependency graph
+
+<!-- markdownlint-disable MD033 MD045 -->
+<img src="./dependency-graph.svg" />
+
 ## Development
 
 ### Prerequisites
