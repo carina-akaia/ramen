@@ -1,4 +1,6 @@
-# 🍜 DRY Ramen
+<!-- markdownlint-disable MD033  -->
+
+# <img alt="🍜" src="./public/logo.svg" width="32" height="32" /> Ramen
 
 [ 🚧 WIP ]
 
@@ -8,8 +10,7 @@ Offline-first scalable battle-tested React app template. Just add water.
 
 ### Dependency graph
 
-<!-- markdownlint-disable MD033 MD045 -->
-<img src="./dependency-graph.svg" />
+<img alt="./dependency-graph.svg" src="./dependency-graph.svg" />
 
 ## Development
 

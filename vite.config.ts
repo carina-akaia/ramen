@@ -33,7 +33,7 @@ export default defineConfig({
 			registerType: "autoUpdate",
 
 			manifest: {
-				name: "DRY Ramen",
+				name: "Ramen",
 				short_name: "Ramen",
 				description: "Offline-first scalable battle-tested React app template. Just add water.",
 				theme_color: "#000000",

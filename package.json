@@ -1,5 +1,5 @@
 {
-	"name": "dry-ramen",
+	"name": "@akaia/ramen",
 	"description": "Offline-first scalable battle-tested React app template. Just add water.",
 	"private": true,
 	"version": "0.0.1",
