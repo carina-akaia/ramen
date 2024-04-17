@@ -22,7 +22,11 @@
 	"madge": {
 		"fileExtensions": ["js", "ts", "tsx"],
 		"tsConfig": "tsconfig.json",
-		"fontSize": "14px"
+		"layout": "dot",
+		"fontSize": "16px",
+		"graphVizOptions": {
+			"compound": true
+		}
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^3.3.4",
