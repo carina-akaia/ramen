@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { RouterProvider, createRouter } from "@tanstack/react-router"
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
-import { routeTree } from "./routes.gen"
+import { routeTree } from "./app.gen"
 
 export const queryClient = new QueryClient({
 	defaultOptions: {
@@ -13,11 +13,11 @@ export const queryClient = new QueryClient({
 	},
 })
 
-const router = createRouter({ routeTree })
+const appRouter = createRouter({ routeTree })
 
 declare module "@tanstack/react-router" {
 	interface Register {
-		router: typeof router
+		router: typeof appRouter
 	}
 }
 
@@ -26,7 +26,7 @@ createRoot(
 ).render(
 	<StrictMode>
 		<QueryClientProvider client={queryClient}>
-			<RouterProvider {...{ router }} />
+			<RouterProvider router={appRouter} />
 		</QueryClientProvider>
 	</StrictMode>,
 )

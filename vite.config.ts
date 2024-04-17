@@ -20,7 +20,7 @@ export default defineConfig({
 
 		TanStackRouterVite({
 			routesDirectory: "src/app",
-			generatedRouteTree: "src/routes.gen.ts",
+			generatedRouteTree: "src/app.gen.ts",
 		}),
 
 		VitePWA({
