@@ -9,15 +9,23 @@
 	},
 	"scripts": {
 		"setup": "corepack enable && corepack prepare pnpm@latest --activate && pnpm i",
-		"inspect:deps": "madge --image dependency-graph.svg src",
-		"add:shadcn-ui": "pnpm dlx shadcn-ui@latest add",
+		"preinstall": "npx only-allow pnpm",
+		"prepare": "pnpm dlx simple-git-hooks",
+		"lint": "pnpm lint --apply",
+		"format": "biome format . --write",
 		"typecheck": "tsc --noEmit",
+		"add:shadcn-ui": "pnpm dlx shadcn-ui@latest add",
+		"generate:dependency-graph": "madge --image dependency-graph.svg src",
 		"generate:pwa": "pwa-assets-generator",
 		"generate": "pnpm generate:pwa",
 		"dev": "concurrently 'pnpm generate' 'vite'",
 		"build": "pnpm generate && NODE_OPTIONS=--max-old-space-size=8192 vite build",
 		"preview": "vite preview",
 		"postinstall": "pnpm generate"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "pnpm generate:dependency-graph && git add -u",
+		"preserveUnused": true
 	},
 	"madge": {
 		"fileExtensions": ["js", "ts", "tsx"],
@@ -66,8 +74,11 @@
 		"@vitejs/plugin-react": "^4.2.1",
 		"browserslist": "^4.23.0",
 		"concurrently": "^8.2.2",
+		"husky": "^9.0.11",
 		"lightningcss": "^1.24.1",
+		"lint-staged": "^15.2.2",
 		"madge": "^7.0.0",
+		"simple-git-hooks": "^2.11.1",
 		"typescript": "^5.4.5",
 		"unocss": "^0.59.3",
 		"unocss-preset-animations": "^1.0.2",
